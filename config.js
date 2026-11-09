@@ -51,12 +51,12 @@ window.ARCGIGUESS_CONFIG = {
     // This is the item ID of a web map in ArcGIS Online / Enterprise.
     // If the web map is private, ArcGIS will automatically prompt the player
     // to sign in when the app loads.
-    webMapItemId: "707a71d354c540f78c2f9101eead4c09",
+    webMapItemId: "9eea057537bf4096a1bf48c3537b0860",
 
     // The title of the layer (inside the web map above) that holds your
     // landmarks. This layer is hidden during play — its features are the
     // "answers". Each feature should be a polygon (the landmark's footprint).
-    landmarkLayerTitle: "Dubai Landmarks",
+    landmarkLayerTitle: "Map Quiz",
 
     // Field names on the landmark layer.
     //   idField   — the unique ID field (used to fetch each landmark's photo).
@@ -118,20 +118,20 @@ window.ARCGIGUESS_CONFIG = {
             code: "en",
             dir: "ltr",
             toggleLabel: "العربية",
-            landmarkNameField: "name",
+            landmarkNameField: "Question",
             surveyLang: null,
             strings: {
                 welcomeTitle: "Welcome to ArcGIGuess!",
                 // {scoringSummary} is generated from the `scoring` block above.
                 welcomeDesc:
-                    "Test your knowledge! We'll show you the name and a picture of a landmark, and you click on the map where you think it is.<br><br>{scoringSummary}",
+                    "Test your knowledge! Answer each question by clicking on the map, where you think the answer is.<br><br>{scoringSummary}",
                 // Template for the auto-generated scoring explanation.
                 // Placeholders: {points} {bucket} {penalty} {min}
                 scoringSummaryTemplate:
                     "- Find it (or within {bucket}m): <strong>+{points} points</strong><br>- Then <strong>-{penalty} point</strong> for every {bucket}m you're off, down to {min}.",
                 startButton: "Start Game",
                 loadingText: "Loading Landmarks...",
-                findLandmarkText: "Find this landmark:",
+                findLandmarkText: "Question:",
                 scoreDisplay: "Score: {score}",
                 roundDisplay: "Round {current} / {total}",
                 confirmButton: "Confirm Guess",
@@ -274,7 +274,7 @@ window.ARCGIGUESS_CONFIG = {
     //   1. A Survey123 form that collects a name and a score.
     //   2. A public (or shared) view of that form's feature layer to read scores from.
     leaderboard: {
-        enabled: true,
+        enabled: false,
 
         // The share URL of your Survey123 form.
         survey123Url:
