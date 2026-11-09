@@ -21,10 +21,10 @@ window.ARCGIGUESS_CONFIG = {
      * ---------------------------------------------------------------------- */
 
     // The name of your game. Shown in the browser tab, share card, and messages.
-    appName: "ArcGIGuess",
+    appName: "NCN Map Quiz",
 
     // A short tagline used in the page title and as the default share-card footer.
-    tagline: "A geo-guessing game powered by the ArcGIS Maps SDK for JavaScript",
+    tagline: "A fun map quiz to test your knowledge of the NCN",
 
     // Text shown at the bottom of the shareable results card.
     // Set to null to fall back to `tagline`.
@@ -70,7 +70,7 @@ window.ARCGIGUESS_CONFIG = {
 
     // Whether to randomize landmark order each game. Set to false to always
     // play them in the layer's natural order (handy for a guided/curated tour).
-    shuffleLandmarks: true,
+    shuffleLandmarks: false,
 
     // Let players bail out mid-game: accept their current score (remaining
     // landmarks count as missed) and jump straight to the results screen.
@@ -89,7 +89,7 @@ window.ARCGIGUESS_CONFIG = {
     // dropping below `minScore`.
     scoring: {
         pointsForHit: 10, // Points for a perfect / very close guess.
-        bucketMeters: 500, // Size of each distance "band", in meters.
+        bucketMeters: 5000, // Size of each distance "band", in meters.
         penaltyPerBucket: 1, // Points lost per band you are off.
         minScore: 0, // The lowest a single round can score.
     },
@@ -121,10 +121,10 @@ window.ARCGIGUESS_CONFIG = {
             landmarkNameField: "Question",
             surveyLang: null,
             strings: {
-                welcomeTitle: "Welcome to ArcGIGuess!",
+                welcomeTitle: "Welcome to our NCN map quiz!",
                 // {scoringSummary} is generated from the `scoring` block above.
                 welcomeDesc:
-                    "Test your knowledge! Answer each question by clicking on the map, where you think the answer is.<br><br>{scoringSummary}",
+                    "Test your knowledge. Answer each question by clicking on the map, where you think the answer is.<br><br>{scoringSummary}",
                 // Template for the auto-generated scoring explanation.
                 // Placeholders: {points} {bucket} {penalty} {min}
                 scoringSummaryTemplate:
@@ -141,7 +141,7 @@ window.ARCGIGUESS_CONFIG = {
                 incorrectTitle: "Oh, so close!",
                 incorrectMessage:
                     "You were <strong>{distance}m</strong> away. You earned <strong>{roundScore} points</strong>. Here's the correct location.",
-                nextButton: "Next Landmark",
+                nextButton: "Next Question",
                 finishEarlyButton: "Finish early",
                 finishEarlyConfirm: "Tap again to end game",
                 gameOverButton: "Show Results",
@@ -149,7 +149,7 @@ window.ARCGIGUESS_CONFIG = {
                 finalScoreText: "Here are your results:",
                 totalScoreLabel: "Total Score",
                 accuracyLabel: "Accuracy",
-                foundLabel: "Landmarks Found",
+                foundLabel: "Locations Found",
                 playAgainButton: "Play Again",
                 shareButton: "Share Results",
                 // {score}, {appName}, and {url} (from social.url) are available.
