@@ -124,11 +124,11 @@ window.ARCGIGUESS_CONFIG = {
                 welcomeTitle: "Welcome to our NCN map quiz!",
                 // {scoringSummary} is generated from the `scoring` block above.
                 welcomeDesc:
-                    "Test your knowledge. Answer each question by clicking on the map, where you think the answer is.<br><br>{scoringSummary}",
+                    "Test your knowledge! For each question, find the correct location, zoom in, and click on the map to submit your answer<br><br>{scoringSummary}",
                 // Template for the auto-generated scoring explanation.
                 // Placeholders: {points} {bucket} {penalty} {min}
                 scoringSummaryTemplate:
-                    "- Find it (or within {bucket}m): <strong>+{points} points</strong><br>- Then <strong>-{penalty} point</strong> for every {bucket}m you're off, down to {min}.",
+                    "- Find it (or within {bucket}m): <strong>+{points} points</strong><br>- Then <strong>-{penalty} point</strong> for every {bucket}m you're off, down to {min}",
                 startButton: "Start Game",
                 loadingText: "Loading Landmarks...",
                 findLandmarkText: "Question:",
