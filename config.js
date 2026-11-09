@@ -175,63 +175,7 @@ window.ARCGIGUESS_CONFIG = {
                 points: "points",
             },
         },
-        {
-            code: "ar",
-            dir: "rtl",
-            toggleLabel: "English",
-            landmarkNameField: "name_ar",
-            surveyLang: "ar",
-            strings: {
-                welcomeTitle: "أهلاً بك في ArcGIGuess!",
-                welcomeDesc:
-                    "اختبر معرفتك! سنعرض لك اسم وصورة معلم وعليك النقر على الخريطة حيث تعتقد أنه يقع.<br><br>{scoringSummary}",
-                scoringSummaryTemplate:
-                    "- إجابة صحيحة (أو ضمن {bucket}م): <strong>+{points} نقاط</strong><br>- ثم <strong>-{penalty} نقطة</strong> عن كل {bucket}م بعيداً، حتى {min}.",
-                startButton: "ابدأ اللعبة",
-                loadingText: "جاري تحميل المعالم...",
-                findLandmarkText: "ابحث عن هذا المعلم:",
-                scoreDisplay: "النتيجة: {score}",
-                roundDisplay: "الجولة {current} / {total}",
-                confirmButton: "تأكيد الإجابة",
-                correctTitle: "إجابة صحيحة!",
-                correctMessage:
-                    "أحسنت! لقد ربحت <strong>+{roundScore} نقاط</strong>.",
-                incorrectTitle: "أوه, قريبة جداً!",
-                incorrectMessage:
-                    "كنت بعيداً مسافة <strong>{distance}م</strong>. لقد ربحت <strong>{roundScore} نقاط</strong>. هذا هو الموقع الصحيح.",
-                nextButton: "المعلم التالي",
-                finishEarlyButton: "إنهاء مبكر",
-                finishEarlyConfirm: "انقر مجدداً لإنهاء اللعبة",
-                gameOverButton: "أظهر النتائج",
-                gameOverTitle: "انتهت اللعبة!",
-                finalScoreText: "ها هي نتيجتك:",
-                totalScoreLabel: "النتيجة الإجمالية",
-                accuracyLabel: "الدقة",
-                foundLabel: "المعالم التي عثرت عليها",
-                playAgainButton: "العب مجدداً",
-                shareButton: "شارك النتيجة",
-                shareText:
-                    "لقد سجلت {score} نقطة في {appName}! كم يمكنك أن تسجّل؟ العب على {url}",
-                shareCardTitle: "نتيجتي في ArcGIGuess!",
-                shareCardScoreLabel: "النتيجة الإجمالية",
-                shareCardAccuracyLabel: "الدقة",
-                shareModalTitle: "شارك نتيجتك!",
-                shareModalDesc:
-                    "انقر بزر الماوس الأيمن أو اضغط مطولاً على الصورة لحفظها ومشاركتها.",
-                webMapError: "لم نتمكن من تحميل الخريطة. يرجى التحقق من المعرف.",
-                layerError:
-                    "لم نتمكن من العثور على طبقة المعالم في الخريطة. تحقق من عنوان الطبقة في config.js.",
-                submitScoreButton: "إرسال النتيجة",
-                viewLeaderboardButton: "قائمة المتصدرين",
-                submitModalTitle: "إرسال نتيجتك",
-                leaderboardModalTitle: "أعلى النتائج",
-                leaderboardLoadingText: "جاري تحميل قائمة المتصدرين...",
-                leaderboardError:
-                    "لا يمكن تحميل قائمة المتصدرين. يرجى المحاولة لاحقاً.",
-                noScores: "لم يتم إرسال أي نتائج بعد.",
-                points: "نقاط",
-            },
-        },
+  
     ],
 
     /* -------------------------------------------------------------------------
