@@ -34,7 +34,7 @@ body,
     pointer-events: none; /* Allow map clicks by default */
     display: flex;
     align-items: flex-end; /* Aligns panels to the bottom */
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* Panels will block pointers when visible */
@@ -123,4 +123,8 @@ body,
     #game-over-panel .grid {
         grid-template-columns: 1fr !important; /* Force 1 column */
     }
+    #welcome-screen img {
+    width: 300px;
+    height: auto;
+}
 }

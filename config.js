@@ -89,7 +89,7 @@ window.ARCGIGUESS_CONFIG = {
     // dropping below `minScore`.
     scoring: {
         pointsForHit: 10, // Points for a perfect / very close guess.
-        bucketMeters: 5000, // Size of each distance "band", in meters.
+        bucketMeters: 1000, // Size of each distance "band", in meters.
         penaltyPerBucket: 1, // Points lost per band you are off.
         minScore: 0, // The lowest a single round can score.
     },
@@ -130,7 +130,7 @@ window.ARCGIGUESS_CONFIG = {
                 scoringSummaryTemplate:
                     "- Find it (or within {bucket}m): <strong>+{points} points</strong><br>- Then <strong>-{penalty} point</strong> for every {bucket}m you're off, down to {min}",
                 startButton: "Start Game",
-                loadingText: "Loading Landmarks...",
+                loadingText: "Loading Quizzy Questions...",
                 findLandmarkText: "Question:",
                 scoreDisplay: "Score: {score}",
                 roundDisplay: "Round {current} / {total}",
@@ -192,10 +192,10 @@ window.ARCGIGUESS_CONFIG = {
     // See the README's "Social sharing" section.
     social: {
         // Headline shown on the preview card.
-        title: "ArcGIGuess — Can you find the landmark?",
+        title: "NCN Map Quiz — Can you find the locations?",
         // One-line description under the headline.
         description:
-            "A quick geo-guessing game: we show you a landmark, you pin it on the map. How well do you know the area?",
+            "A quick geo-guessing game: we ask you a question, you pin it on the map. How well do you know the NCN?",
         // Preview image. Use an ABSOLUTE URL for reliable previews.
         // Recommended size: ~1200×630px. Reusing the README screenshot here.
         image: "https://aelhussiny.github.io/ArcGIGuess/assets/screenshot.png",
@@ -218,11 +218,11 @@ window.ARCGIGUESS_CONFIG = {
     //   1. A Survey123 form that collects a name and a score.
     //   2. A public (or shared) view of that form's feature layer to read scores from.
     leaderboard: {
-        enabled: false,
+        enabled: true,
 
         // The share URL of your Survey123 form.
         survey123Url:
-            "https://survey123.arcgis.com/share/c4317eb262934df4b2fe38cb42a3d1d1",
+            "https://arcg.is/18bTry5",
 
         // The Survey123 field to pre-fill with the player's score.
         // Format is "field:<your_field_name>".
@@ -231,11 +231,10 @@ window.ARCGIGUESS_CONFIG = {
         // The FeatureServer query endpoint used to READ the leaderboard.
         // Point this at a public view of your survey's results layer.
         dataApiUrl:
-            "https://services1.arcgis.com/zu8dBGfmKCvrZHh2/arcgis/rest/services/survey123_c4317eb262934df4b2fe38cb42a3d1d1_results/FeatureServer/0/query",
+            "https://services5.arcgis.com/1ZHcUS1lwPTg4ms0/arcgis/rest/services/survey123_1f7a4006065d4351815d2a7a120373ea/FeatureServer",
 
         // The fields in that layer used to display the leaderboard.
-        firstNameField: "first_name",
-        lastNameField: "last_name",
+        firstNameField: "name",
         scoreField: "score",
 
         // How many top scores to show.
