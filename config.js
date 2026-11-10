@@ -89,7 +89,7 @@ window.ARCGIGUESS_CONFIG = {
     // dropping below `minScore`.
     scoring: {
         pointsForHit: 10, // Points for a perfect / very close guess.
-        bucketMeters: 1000, // Size of each distance "band", in meters.
+        bucketMeters: 5000, // Size of each distance "band", in meters.
         penaltyPerBucket: 1, // Points lost per band you are off.
         minScore: 0, // The lowest a single round can score.
     },
@@ -129,7 +129,7 @@ window.ARCGIGUESS_CONFIG = {
                 // Placeholders: {points} {bucket} {penalty} {min}
                 scoringSummaryTemplate:
                     "- Find it (or within {bucket}m): <strong>+{points} points</strong><br>- Then <strong>-{penalty} point</strong> for every {bucket}m you're off, down to {min}",
-                startButton: "Start Game",
+                startButton: "Start Quiz",
                 loadingText: "Loading Quizzy Questions...",
                 findLandmarkText: "Question:",
                 scoreDisplay: "Score: {score}",
