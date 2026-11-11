@@ -508,9 +508,13 @@ $arcgis
             const landmark = allLandmarks[currentLandmarkIndex];
             const name =
                 landmark.attributes[currentLang().landmarkNameField];
+            const hint = landmark.attributes.Hint;
             const imageUrl = landmark.attributes.imageUrl;
 
             $("landmark-name").innerText = name;
+
+            $("landmark-hint").innerText =
+                hint ? `Hint: ${hint}` : "";
 
             // Handle the image display
             if (imageUrl) {
