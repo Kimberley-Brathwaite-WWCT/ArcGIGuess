@@ -405,7 +405,7 @@ $arcgis
                     (l) => l.landmarkNameField
                 );
                 query.outFields = [
-                    ...new Set([...nameFields, CONFIG.landmarkIdField]),
+                    ...new Set([...nameFields, CONFIG.landmarkIdField, 'Hint',]),
                 ];
                 query.returnGeometry = true;
 
