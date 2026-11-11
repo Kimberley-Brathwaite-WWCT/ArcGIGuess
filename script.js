@@ -519,6 +519,8 @@ console.log("HINT VALUE:", allLandmarks[0].attributes.Hint);
             $("landmark-hint").innerText =
                 hint ? `Hint: ${hint}` : "";
 
+                console.log("HINT ELEMENT:", $("landmark-hint").innerText);
+
             // Handle the image display
             if (imageUrl) {
                 imageElements.container.classList.remove("hidden");
