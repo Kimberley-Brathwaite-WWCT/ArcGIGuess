@@ -516,8 +516,21 @@ console.log("HINT VALUE:", allLandmarks[0].attributes.Hint);
 
             $("landmark-name").innerText = name;
 
-            $("landmark-hint").innerText =
-                hint ? `Hint: ${hint}` : "";
+            
+            const hintElement = $("landmark-hint");
+            const hintButton = $("show-hint-button");
+
+            hintElement.innerText = hint ? `Hint: ${hint}` : "";
+            hintElement.classList.add("hidden");
+
+            hintButton.classList.toggle("hidden", !hint);
+            hintButton.innerText = "Show Hint";
+
+            hintButton.onclick = () => {
+                const isHidden = hintElement.classList.toggle("hidden");
+                hintButton.innerText = isHidden ? "Show Hint" : "Hide Hint";
+            };
+
 
                 console.log("HINT ELEMENT:", $("landmark-hint").innerText);
 
