@@ -415,6 +415,9 @@ $arcgis
                         // Keep the layer's natural order here; shuffling (if
                         // enabled) happens per-game in startGame().
                         allLandmarks = featureSet.features;
+console.log("LANDMARK DATA:", allLandmarks[0].attributes);
+
+console.log("HINT VALUE:", allLandmarks[0].attributes.Hint);
 
                         const attachmentPromises = allLandmarks.map(
                             (feature) => {
