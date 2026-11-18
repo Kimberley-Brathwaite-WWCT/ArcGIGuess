@@ -867,7 +867,7 @@ console.log("HINT VALUE:", allLandmarks[0].attributes.Hint);
             const queryParams = {
                 f: "json",
                 where: "1=1",
-                outFields: `${LEADERBOARD.firstNameField},${LEADERBOARD.lastNameField},${LEADERBOARD.scoreField}`,
+                outFields: `${LEADERBOARD.nameField},${LEADERBOARD.scoreField}`,
                 orderByFields: `${LEADERBOARD.scoreField} DESC`,
                 resultRecordCount: LEADERBOARD.topN,
             };
@@ -902,9 +902,9 @@ console.log("HINT VALUE:", allLandmarks[0].attributes.Hint);
 
             features.forEach((feature, index) => {
                 // Combine the first and last name fields into one display name.
-                const firstName = feature.attributes[LEADERBOARD.firstNameField] || "";
+                const name = feature.attributes[LEADERBOARD.nameField] || "";
                 const lastName = feature.attributes[LEADERBOARD.lastNameField] || "";
-                const name = `${firstName} ${lastName}`.trim() || "Anonymous";
+                const name = `${name} ${lastName}`.trim() || "Anonymous";
                 const score = feature.attributes[LEADERBOARD.scoreField] || 0;
 
                 // Build with textContent (never innerHTML) so a player-submitted
